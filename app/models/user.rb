@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   enum role: [:unassigned, :employee, :company, :admin]
 
+  has_one :employee, :dependent => :destroy
+
 
 
   def set_default_role

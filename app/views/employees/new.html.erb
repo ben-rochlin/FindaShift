@@ -1,12 +1,9 @@
-hi there, new employee
-
-
 <h1>New Employee</h1>
 
 <%= render 'form', employee: @employee %>
 
 <h2>Add a comment:</h2>
-<%= form_with(model: [ current_user, current_user.employees.build ], local: true) do |form| %>
+<%= form_with(model: @employee, local: true) do |form| %>
   <p>
     <%= form.label :first_name %><br>
     <%= form.string :first_name %>
@@ -16,8 +13,8 @@ hi there, new employee
     <%= form.string :last_name %>
   </p>
   <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
+    <%= form.label :about %><br>
+    <%= form.text_area :about %>
   </p>
   <p>
     <%= form.submit %>
