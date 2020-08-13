@@ -16,9 +16,9 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     if resource.role == 'employee' && resource.sign_in_count == 1
-      test1_show_path 
+      new_employee_path 
     elsif resource.role == 'employee' && resource.sign_in_count > 1
-      test2_show_path
+      employee_path
 
     elsif resource.role == 'company' && resource.sign_in_count == 1
       test1_show_path 

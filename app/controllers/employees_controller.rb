@@ -10,11 +10,12 @@ class EmployeesController < ApplicationController
   # GET /employees/1
   # GET /employees/1.json
   def show
+    @employee = current_user
   end
 
   # GET /employees/new
   def new
-    @employee = Employee.new(employee_params)
+    @employee = Employee.new
   end
 
   # GET /employees/1/edit
@@ -45,9 +46,9 @@ def create
     #   else
     #     format.html { render :new }
     #     format.json { render json: @employee.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+    #     end
+    #   end
+    # end
 
   # PATCH/PUT /employees/1
   # PATCH/PUT /employees/1.json

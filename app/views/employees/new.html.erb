@@ -3,7 +3,7 @@
 <%= render 'form', employee: @employee %>
 
 <h2>Add a comment:</h2>
-<%= form_with(model: @employee, local: true) do |form| %>
+<%= form_with(@employee, url: new_employee_path local: true) do |form| %>
   <p>
     <%= form.label :first_name %><br>
     <%= form.string :first_name %>
