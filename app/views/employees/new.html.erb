@@ -1,25 +1,19 @@
 <h1>New Employee</h1>
 
-<%= render 'form', employee: @employee %>
+<%# <%= render 'form', employee: @employee %> %>
 
-<h2>Add a comment:</h2>
-<%= form_with(@employee, url: new_employee_path local: true) do |form| %>
-  <p>
-    <%= form.label :first_name %><br>
-    <%= form.string :first_name %>
-  </p>
-    <p>
-    <%= form.label :last_name %><br>
-    <%= form.string :last_name %>
-  </p>
-  <p>
-    <%= form.label :about %><br>
-    <%= form.text_area :about %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+
+
+<%= form_with model: @employee do |form| %>
+  <%= form.string :first_name %>
+  <%= form.string :last_name %>
+  <%= form.text :about %>
+
+  <%= form.submit %>
 <% end %>
+
+
+
 
 
 <%= link_to 'Back', employees_path %>
