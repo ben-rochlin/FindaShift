@@ -1,4 +1,8 @@
-.small-middle-container{
-	margin: auto;
-	width: 40%;
-}
+@media (min-width: 992px) {
+    .container-small {
+        width: 500px;
+    }
+    .container-large {
+        width: 1170px;
+    } 
+} 
