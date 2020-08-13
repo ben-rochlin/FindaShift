@@ -19,6 +19,11 @@ class ApplicationController < ActionController::Base
       test1_show_path 
     elsif resource.role == 'employee' && resource.sign_in_count > 1
       test2_show_path
+
+    elsif resource.role == 'company' && resource.sign_in_count == 1
+      test1_show_path 
+    elsif resource.role == 'company' && resource.sign_in_count > 1
+      test2_show_path
     else 
      root_path   
     end
