@@ -14,12 +14,14 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:role])
   end
 
+  # def after_sign_in_path_for(resource)
+  #   if resource.role == 'employee'
+  #       test1_show_path
+  # end
+
   def after_sign_in_path_for(resource)
-    if resource.role == 'employee'
-        new_employee_path
-     
-    # else
-      #root_path
+    if resource.sign_in_count == 1
+        test2_show_path
     end
   end
 
