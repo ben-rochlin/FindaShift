@@ -4,5 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :trackable
 
-  enum role: [:employee, :company, :admin]
+  enum role: [:unassigned, :employee, :company, :admin]
+
+
+
+  def set_default_role
+    self.role ||= :unassigned
+  end
 end
