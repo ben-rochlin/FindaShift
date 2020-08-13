@@ -15,10 +15,12 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    if resource.role == 'unassigned'
-        edit_user_registration_path
-    else 
+    if resource.role == 'employee'
       test1_show_path 
+    elsif resource.role == 'company'
+      test2_show_path
+    else 
+     root_path   
     end
   end
 

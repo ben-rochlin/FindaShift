@@ -38,7 +38,7 @@
 
         <%# <input class="form-control my-3 bg-light" id="input2-signin-01" type="password" placeholder="Password"> %>
 
-        <%= f.hidden_field :role, value: "unassigned" %>
+
 
 
         <%# <button class="btn btn-primary btn-block py-2 my-3">Sign Up!</button> %>
@@ -46,7 +46,10 @@
  
         <br>
 
-       
+        <%= f.radio_button :role, 'employee', checked: true %> <%= f.label :role, "Employee" %> 
+   
+        <%= f.radio_button :role, 'company' %> <%= f.label :role, "Employer" %>   
+
  
 
 
