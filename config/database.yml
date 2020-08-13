@@ -24,6 +24,10 @@ default: &default
 development:
   <<: *default
   database: findashift2_development
+  host: 127.0.0.1
+  username: postgres
+  password: postgres
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +62,9 @@ development:
 test:
   <<: *default
   database: findashift2_test
+  host: 127.0.0.1
+  username: postgres
+  password: postgres
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
