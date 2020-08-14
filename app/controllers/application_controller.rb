@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
       employee_path
 
     elsif resource.role == 'company' && resource.sign_in_count == 1
-      test1_show_path 
+      new_manager_path 
     elsif resource.role == 'company' && resource.sign_in_count > 1
       test2_show_path
     else 

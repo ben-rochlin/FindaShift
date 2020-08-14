@@ -7,6 +7,7 @@ class User < ApplicationRecord
   enum role: [:unassigned, :employee, :company, :admin]
 
   has_one :employee, :dependent => :destroy
+  has_one :manager, :dependent => :destroy
 
 
 
