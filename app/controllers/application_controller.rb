@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
 
     before_action :configure_permitted_parameters, if: :devise_controller?
+    before_action :authenticate_user!
+    before_action :current_user
 
 
 
@@ -23,10 +25,11 @@ class ApplicationController < ActionController::Base
     elsif resource.role == 'company' && resource.sign_in_count == 1
       new_manager_path 
     elsif resource.role == 'company' && resource.sign_in_count > 1
-      test2_show_path
+      managers_path
     else 
-     root_path   
+    root_path   
     end
+   
   end
 
   # def after_sign_in_path_for(resource)

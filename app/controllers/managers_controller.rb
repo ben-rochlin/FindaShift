@@ -1,9 +1,21 @@
 class ManagersController < ApplicationController
-  before_action :set_manager, only: [:show, :edit, :update, :destroy]
+  # before_action :set_manager, only: [:show, :edit, :update, :destroy]
+  before_action :check_for_existing_manager, only: [:new, :create]
+  before_action :current_user
+
+
+def index
+  if current_user.manager
+    redirect_to current_user.manager
+  end
+end  
+
 
 def new
-  @manager = Manager.new
+    @manager = Manager.new
 end
+ 
+
 
 
 
@@ -12,7 +24,8 @@ end
   end
 
   def show
-    @manager = Manager.find(params[:id])
+    # @manager = Manager.find(params[:id])
+    @manager = current_user.manager
   end
 
   # POST /managers
@@ -63,6 +76,12 @@ end
     # Use callbacks to share common setup or constraints between actions.
     def set_manager
       @manager = Manager.find(params[:id])
+    end
+
+    def check_for_existing_manager
+      if current_user.manager
+        redirect_to current_user.manager, notice: "You have already created a profile."
+      end
     end
 
     # Only allow a list of trusted parameters through.
