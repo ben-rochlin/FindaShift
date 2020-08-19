@@ -1,0 +1,268 @@
+
+
+
+<body onload="myFunction()" id="body">
+<div class="container">
+<div class="container-fluid bg-white text-dark" id="loader">
+    <div class="row d-flex flex-row justify-content-center align-items-center" style="min-height:100px;">
+        <div class="row">
+            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+        </div>   
+        
+    </div>       
+</div>
+<div class="container-fluid" style="display: none;" id="root">
+    <div class="row p-2">
+        <div class="col-md-4 justify-content-center bg-white border-right border-light p-4">
+            <div class="row justify-content-center">                
+                <img role="presentation" class="rounded-circle mt-2" src="./images/profile.jpg">
+            </div>
+            <div class="row justify-content-center">                
+                <h3 class="tex-center text-dark"><b>Roopan Valiya Veetil</b></h3>
+            </div>
+            <div class="row justify-content-center">  
+                <h6 class="text-center text-muted">Fullstack Developer</h6>
+            </div>
+            <div class="row justify-content-center">
+                <ul class="list-unstyled contact-links text-center text-dark">
+                    <li><i class="fa fa-md fa-location-arrow"></i> Kasargod, Kerala, India</li>
+                    <li><i class="fa fa-md fa-phone"></i> (+91) 9496243415</li>
+                    <li><i class="fa fa-md fa-at"></i><a href="mailto:yiioverflow@gmail.com"> yiioverflow@gmail.com</a></li>
+                </ul>
+            </div>
+            <%# <div class="row justify-content-center"> 
+                <h6 class="text-center">
+                    <span class="badge label badge-danger">Php</span>
+                    <span class="badge badge-primary">Yii</span>
+                    <span class="badge badge-primary">Laravel</span>
+                    <span class="badge badge-warning">React</span>
+                    <span class="badge badge-warning">Vue</span>
+                    <span class="badge badge-dark">Node</span>
+                    <span class="badge badge-dark">Svelte</span>  
+                </h3>
+            </div> %>
+            <hr/>
+            <div class="row justify-content-center">
+                <ul class="list-unstyled contact-links text-center text-dark">
+                    <a class="fa fa-github fa-2x text-dark text-decoration-none" href="https://github.com/yiioverflow"> </a>
+                    <a class="fa fa-skype fa-2x text-info text-decoration-none" href="skype:roopan.valiya.veetil?chat"> </a>
+                    <a class="fa fa-whatsapp fa-2x text-success text-decoration-none" href="https://wa.me/919496243415"> </a>
+                    <a class="fa fa-envelope fa-2x text-warning text-decoration-none" href="mailto:yiioverflow@gmail.com"> </a>
+                    <a class="fa fa-facebook fa-2x text-primary text-decoration-none" href="https://facebook.com/roopz/"> </a>
+                    <a class="fa fa-google fa-2x text-danger text-decoration-none" href="mailto:yiioverflow@gmail.com"> </a>
+                </ul>
+            </div>
+            <div class="row justify-content-center text-muted">
+                <i class="fa fa-snowflake-o fa-spin fa-md"></i>
+            </div>   
+            <div class="row justify-content-center">
+                <p class="text-muted">Need help ? I am available from 5.30 AM to 10.30 PM (IST).</p>
+                <p  class="text-muted">I prefer <a href="skype:roopan.valiya.veetil?chat"> skype</a>, <a href="https://wa.me/919496243415"> whatsapp</a>  or <a href="mailto:yiioverflow@gmail.com"> email</a></p>
+            </div>   
+            <hr /> 
+            <div class="row justify-content-center">
+                <p class="text-center">I built this site with 
+                    <a class="text-primary text-decoration-none" href="http://roopz.club"> Html 5</a> components and Bootstrap. The full source code can be found in my <a class="fa fa-github text-primary" href="https://github.com/yiioverflow"> Github</a> repo.</p>
+            </div> 
+        </div>
+        <div class="col-md-8 bg-white text-secondary p-5">
+            <div class="row border-bottom border-muted">                  
+                <h4 class="text-uppercase"><i class="fa fa-md fa-user"></i> <b>Welcome Ben</b></h4>
+            </div>
+            <div class="row pt-3"> 
+                <p class="text-justify">
+                    Hi, I’m Roopan! I’m a full-stack developer who has been programming for over 12 years. I’m specialized in <span class="badge badge-light">PHP & Javascript</span> development for large-scale applications and I enjoy spending countless hours learning and playing with new technologies to use in my next projects.
+                    I have my contact detailes mentioned here and feel free to ping me there.</p>
+            </div> 
+
+
+
+                <%# <br>
+             <br> %>
+              <br>
+            <div class="row border-bottom border-muted">
+                <h4><i class="fa fa-md fa-building"></i> 
+                    <b class="text-uppercase">Your Profile</b>
+                </h4>
+            </div>
+
+            <br>
+              <br>
+            
+
+            <div class="row pt-1">
+                <h5 class="text-dark"><b>Fullstack Developer (Freelance)<a href="https://www.anvilinsights.com/" class="text-decoration-none text-dark"> <small>Creative Anvil</small></a></b></h5>
+            </div>
+            <div class="row">
+                <h6>Jan, 2019</h6>
+            </div>
+            <div class="row">
+                <p class="text-left pr-3">Storage & Movers CRM and Realestate based Projects. Awesome tools payed with are 
+                    <span class="badge badge-light"> NodeJs</span>
+                    <span class="badge badge-light"> ReactJs</span>
+                    <span class="badge badge-light"> Php</span>
+                    <span class="badge badge-light"> YII</span>
+                    <span class="badge badge-light"> Boostrap-4</span>
+                </p>
+            </div>
+
+                <br>
+              <br>
+
+            <div class="row">
+                <h5 class="text-dark"><b>Software Architect<a href="https://sellanyhome.com/" class="text-decoration-none text-dark"><small> SellanyHome</small></a></b></h5>
+            </div>
+            <div class="row">
+                <h6>Jan, 2017</h6>
+            </div>
+            <div class="row">
+                <p class="text-justify pr-3">Real estate & used car sale projects. 
+                    <span class="badge badge-light"> Php</span>
+                    <span class="badge badge-light"> Javascript</span>
+                    <span class="badge badge-light"> Ionic</span>
+                    <span class="badge badge-light"> YII</span>
+                </p>                                               
+            </div>
+            <div class="row">
+                <h5 class="text-dark"><b>Senior Fullstack Developer <a href="https://prologuetechnology.com/" class="text-decoration-none text-dark"><small> Prologue Technologies</small></a></b></h5>
+            </div>
+            <div class="row">
+                <h6>Dec, 2013</h6>
+            </div>
+            <div class="row">
+                <p class="text-justify pr-3">Storage and movers CRM projects. 
+                    <span class="badge badge-light"> Php</span>
+                    <span class="badge badge-light"> Javascript</span>
+                    <span class="badge badge-light"> YII-1</span>
+                    <span class="badge badge-light"> YII-2</span>
+                    <span class="badge badge-light"> Wordpress</span>
+                </p>
+            </div>            
+            <div class="row">
+                <h5 class="text-dark"><b>Javascript Developer<a href="https://www.clevertech.biz/" class="text-decoration-none text-dark"><small> CleverTech</small></a></b><small> </small><h5>
+            </div>
+            <div class="row">
+                <h6>Jan, 2013</h6>
+            </div>
+            <div class="row">
+                <p class="text-justify pr-3">Its an awesome experience to work with the team of world class developers around the globe remote.
+                    <span class="badge badge-light"> Php</span>
+                    <span class="badge badge-light"> Javascript</span>
+                    <span class="badge badge-light"> Php</span>
+                    <span class="badge badge-light"> YII-2</span>
+                </p>                    
+            </div>
+            <div class="row">
+                <h5 class="text-dark"><b>PHP/Yii Developer <a href="http://www.zadego.com/" class="text-decoration-none text-dark"><small> Zadego</small></a></b></h5>
+            </div>
+            <div class="row">
+                <h6>Jun, 2011</h6>
+            </div>
+            <div class="row">
+                <p class="text-justify pr-3">First remote team, from Austria -  I worked with.
+                    <span class="badge badge-light"> Php</span>
+                    <span class="badge badge-light"> Javascript</span>
+                    <span class="badge badge-light"> Yii-1</span>
+                </p>                                               
+            </div> 
+            <div class="row">
+                <h5 class="text-dark"><b>Fullstack PHP/YII Developer <a href="https://www.ndimensionz.com/" class="text-decoration-none text-dark"><small> NDimensionz Solutions</small></a></b></h5>
+            </div>
+            <div class="row">
+                <h6>June, 2010</h6>
+            </div>
+            <div class="row">
+                <p class="text-justify pr-3">Banking project. 
+                    <span class="badge badge-light"> Php</span>
+                    <span class="badge badge-light"> Javascript</span>
+                    <span class="badge badge-light"> Yii-1</span>
+                </p>                                               
+            </div>
+            <div class="row">
+                <h5 class="text-dark"><b>PHP Developer <a href="https://siliconits.com/" class="text-decoration-none text-dark"><small> Silicon IT Solutions</small></a></b></h5>
+            </div>
+            <div class="row">
+                <h6>June, 2007</h6>
+            </div> 
+            <div class="row">
+                <p class="text-justify pr-3">Banking Project.
+                    <span class="badge badge-light"> Php</span>
+                    <span class="badge badge-light"> Mysql</span>
+                    <span class="badge badge-light"> Html</span>
+                </p>                                               
+            </div>                     
+            <div class="row border-bottom border-muted">                  
+                <h4 class="text-uppercase"><i class="fa fa-md fa-code"></i> <b>Skills</b></h4>
+            </div>
+            <div class="row pt-1 pb-3"> 
+                <h5>
+                    <span class="badge badge-danger mt-2">Php</span>
+                    <span class="badge badge-primary mt-2">Yii-1 & Yii-2</span>
+                    <span class="badge badge-primary mt-2">Laravel</span>
+                    <span class="badge badge-warning mt-2">React.js</span>
+                    <span class="badge badge-warning mt-2">Vue</span>
+                    <span class="badge badge-warning mt-2">Node</span>
+                    <span class="badge badge-warning mt-2">Svelte</span>
+                    <span class="badge badge-warning mt-2">JQuery</span>
+                    <span class="badge badge-info mt-2">Html</span>
+                    <span class="badge badge-info mt-2">Css</span>
+                    <span class="badge badge-info mt-2">Bootstrap-4</span>
+                    <span class="badge badge-warning mt-2">Mysql</span>
+                    <span class="badge badge-secondary mt-2">Git</span>
+                    <span class="badge badge-secondary mt-2">Svn</span>
+                    <span class="badge badge-secondary mt-2">Aws</span>
+                    <span class="badge badge-secondary mt-2">Docker</span>
+                    <span class="badge badge-secondary mt-2">Ubuntu</span>
+                    <span class="badge badge-secondary mt-2">Jira</span>             
+                </h5>
+            </div>
+            <div class="row border-bottom border-muted">                  
+                <h4 class="text-uppercase"><i class="fa fa-md fa-mortar-board"></i> <b>Education</b></h4>
+            </div>
+            <div class="row pt-3"> 
+                <h4 class="text-justify pr-3"><i class="fa fa-cog fa-spin fa-xs"></i> Batchelor of Technology <small> Computer Science and Engineering</small></h4>             
+                <h4 class="text-justify pr-3"><i class="fa fa-cog fa-spin fa-sm"></i> Diploma<small> Computer Science and Engineering</small></h4>   
+            </div>              
+        </div>            
+    </div>
+    </div>
+</div>
+<footer class="footer" id="footer" style="display:none">
+    <div class="container">
+      <div class="row justify-content-center">
+         <span class="text-muted">© 2020 Copyright: <a href="http://roopz.club/"> roopz.club</a></span>
+      </div>
+      </div>
+      
+    </div>
+  </footer>
+  <script>
+    var myVar;    
+    function myFunction() {
+      document.getElementById("body").style.background = "#ffffff";
+      myVar = setTimeout(showPage, 2000);
+    }    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("root").style.display = "block";
+      document.getElementById("footer").style.display = "block";
+      document.getElementById("body").style.background = "#f0f0f0";
+    }
+    </script>  
+</body>
+</html>
+
+    © 2020 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Status
+    Help
+
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
