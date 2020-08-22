@@ -1,5 +1,5 @@
 class ManagersController < ApplicationController
-  # before_action :set_manager, only: [:show, :edit, :update, :destroy]
+  before_action :set_manager, only: [:show, :edit, :update, :destroy]
   before_action :check_for_existing_manager, only: [:new, :create]
   before_action :current_user
 
@@ -21,6 +21,7 @@ end
 
   # GET /managers/1/edit
   def edit
+    @manager = current_user.manager
   end
 
   def show
@@ -50,16 +51,9 @@ end
 
   # PATCH/PUT /managers/1
   # PATCH/PUT /managers/1.json
-  def update
-    respond_to do |format|
-      if @manager.update(manager_params)
-        format.html { redirect_to @manager, notice: 'Manager was successfully updated.' }
-        format.json { render :show, status: :ok, location: @manager }
-      else
-        format.html { render :edit }
-        format.json { render json: @manager.errors, status: :unprocessable_entity }
-      end
-    end
+  def update 
+  @manager.update(manageredit_params)
+  redirect_to @manager
   end
 
   # DELETE /managers/1
@@ -75,7 +69,7 @@ end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_manager
-      @manager = Manager.find(params[:id])
+      @manager = current_user.manager
     end
 
     def check_for_existing_manager
@@ -86,6 +80,10 @@ end
 
     # Only allow a list of trusted parameters through.
     def manager_params
+      params.require(:manager).permit(:name, :user_id)
+    end
+
+    def manageredit_params
       params.require(:manager).permit(:name, :user_id)
     end
 end
