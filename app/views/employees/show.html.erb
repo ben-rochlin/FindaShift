@@ -1,21 +1,147 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>hi there:</strong>
-  <%= @employee.first_name %>
-</p>
-
-<p>
-  <strong>Article:</strong>
-  <%= @employee.last_name %>
-</p>
-
-<p>
-  <strong>Article:</strong>
-  <%= @employee.about %>
-</p>
 
 
 
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Back', employees_path %>
+<body onload="myFunction()" id="body">
+<div class="container">
+<div class="container-fluid bg-white text-dark" id="loader">
+    <div class="row d-flex flex-row justify-content-center align-items-center" style="min-height:100px;">
+        <div class="row">
+            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+        </div>   
+        
+    </div>       
+</div>
+<div class="container-fluid bg-secondary" style="display: none;" id="root">
+    <div class="row p-2">
+        <div class="col-md-4 justify-content-center bg-dark border-right border-light p-4">
+            <div class="row justify-content-center">     
+            <br>           
+                <%= image_tag ("/assets/face.jpg"), style: "max-width:47%;", class: "img-responsive mt-1 border border-secondary rounded"%>
+            </div>
+            <%# <div class="row justify-content-center">                
+                <h3 class="tex-center text-dark"><b>Benjamin Rochlin</b></h3>
+            </div>
+            <div class="row justify-content-center">  
+                <h6 class="text-center text-muted">Fullstack Developer</h6>
+            </div> %>
+
+
+            <div class="row justify-content-center">
+             <div style= "max-width:50%;">
+<br>
+            <button type="button" class="btn-sm btn-light btn-block disabled">add/change Photo</button>
+            
+        
+            </div>   
+            </div>   
+
+
+            
+           <hr color="red"size="10">  
+
+            <div class="row justify-content-center">
+             <div style= "max-width:70%;">
+            
+            <button type="button" class="btn btn-secondary btn-sm btn-block">Same </button>
+            <br>
+            <button type="button" class="btn btn-secondary btn-default btn-block">Same sized </button>
+            <br>
+            <button type="button" class="btn btn-secondary btn-block">Same sized button</button>
+            <br>
+            <button type="button" class="btn btn-secondary btn-block">Bluish - btn-light</button>
+            <br>
+            <%# <button type="button" class="btn btn-secondary btn-block">Dark grey - btn-secondary</button> %>
+             <%# <br> %>
+            <button type="button" class="btn btn-primary btn-block">Finda Shift</button>
+            
+            <%# <button type="button" class="btn btn-info">Information  btn-info</button> <br /><br /><br />
+            
+            <button type="button" class="btn btn-light">Light grey  btn-light</button>
+            
+            <button type="button" class="btn btn-dark">Blackish  btn-dark</button>
+            
+            <button type="button" class="btn btn-danger">Delete Account btn-danger</button>
+            
+            <button type="button" class="btn btn-warning">Orange btn-warning</button> %>
+            </div>   
+            </div>   
+ 
+          
+            <div class="row justify-content-center text-muted">
+                <i class="fa fa-snowflake-o fa-spin fa-md"></i>
+            </div>   
+        
+
+
+
+
+      
+        </div>
+
+
+
+      
+
+
+        <div class="col-md-8 bg-white text-secondary p-5">
+        
+            <div class="row border-bottom border-muted">                  
+                <h1 class="text"><i class="fa fa-md fa-user text-center"></i> <b>Welcome To Findashift</b></h1>
+            </div>
+            
+            <div class="row pt-3"> 
+                <p class="text-justify"> This is your profile section, so make sure that your profile is accurate and up to date as this is what your potential employer will see. 
+                     <span class="badge badge-light"></span> .</p>
+            </div> 
+
+
+              <br>
+            
+              <br>
+            <div class="row border-bottom border-muted">
+                <h3 class="text-dark"> <b> <%= @employee.first_name %> <%= @employee.last_name %><a href="https://www.anvilinsights.com/" class="text-decoration-none text-dark"> <small> <%= @employee.city %>, <%= @employee.state %></small></a></b></h3>
+            </div>
+
+         
+
+            <div class="row pt-1">
+                <h4><%= @employee.email %> </h4>
+            </div>
+           
+      
+
+                <br>
+        
+
+            <div class="row">
+                <h5 class="text-dark"><b>About me:</b></h5>
+            </div>
+           
+            <div class="row">
+                <p class="text-justify pr-3"> <%= @employee.about %> 
+                </p>                                               
+            </div>
+                     
+            
+        </div>            
+    </div>
+    </div>
+</div>
+
+  <script>
+    var myVar;    
+    function myFunction() {
+      document.getElementById("body").style.background = "#ffffff";
+      myVar = setTimeout(showPage, 2000);
+    }    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("root").style.display = "block";
+      document.getElementById("footer").style.display = "block";
+      document.getElementById("body").style.background = "#f0f0f0";
+    }
+    </script>  
+</body>
+
+
+ 
