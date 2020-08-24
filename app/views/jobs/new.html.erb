@@ -7,13 +7,13 @@
 
 
     <div class="col-md-12 order-md-1 pt-5">
-    <h4 class="mb-3">Company Profile</h4>
+    <h4 class="mb-3">New Job lsiting</h4>
 
 
 
 
 
-    <%= form_with(model: @company, local: true) do |form| %>
+    <%= form_with(model: @job, local: true) do |form| %>
   
   
    
@@ -29,30 +29,14 @@
 
         <div class="row">
           <div class="col-md-12 mb-3">
-            <label for="firstName">Company name</label>
-            <%= form.text_field :name, class: "form-control" %>
+            <label for="firstName">Job title</label>
+            <%= form.text_field :title, class: "form-control" %>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
           </div>
        </div>
 
-  
-
-
-
-        <div class="mb-3">
-          <label for="email">Email <span class="text-muted">(contact email)</span></label>
-          <%= form.text_field :email, class: "form-control", placeholder: "your_email@example.com" %>
-          <div class="invalid-feedback">
-            Please enter a valid email address for shipping updates.
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <label for="website">Company website</label>
-          <%= form.text_field :website, class: "form-control", placeholder: "your_company.com" %>
-        </div>
 
 
 
@@ -69,15 +53,13 @@
         </div>
 
            <div class="mb-3">
-          <label for="about">About</label>
-          <%= form.text_area :about, class: "form-control", placeholder: "Give a brief summary about yourself" %>
+          <label for="about">Job Description</label>
+          <%= form.text_area :description, class: "form-control", placeholder: "" %>
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
         </div>
        
-           <label for="about">Company Logo</label> <br>
-          <%= form.file_field :logo %>
       
       
         </div>
