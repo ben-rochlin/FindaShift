@@ -1,7 +1,7 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: [:show, :edit, :update, :destroy]
   before_action :check_for_existing_employee, only: [:new, :create]
-  before_action :current_user
+  
 
 
 def index

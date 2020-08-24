@@ -1,25 +1,87 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Jobs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @jobs.each do |job| %>
-      <tr>
-        <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+     
 <br>
 
 <%= link_to 'New Job', new_job_path %>
+
+
+
+<div class="container">
+<section class="content inbox">
+    <div class="container-fluid">
+        <div class="row clearfix">
+         <h1> Jobs Listings </h1>          
+        </div>  
+
+
+  <% @jobs.each do |job| %>
+        <div class="row clearfix">
+            <div class="col-md-12 col-lg-12 col-xl-12">
+                <ul class="mail_list list-group list-unstyled">
+
+
+                    <li class="list-group-item">
+                        <div class="media">
+                            <div class="pull-left">                                
+                            
+                            
+                            </div>
+                            
+                            <div class="media-body">
+                                <div class="media-heading m-r-10">
+                                    <%= link_to job.title, job_path(job)%> 
+                                    <span class="badge bg-blue"><%= job.city %>, <%= job.state %></span>
+                                    <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017"><%= job.created_at  %></time><i class="zmdi zmdi-attachment-alt"></i> </small>
+                                </div>
+                                <p class="msg"><%= job.description %></p>
+                                <%= link_to 'Edit', edit_job_path(job) %> <%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %>
+                            </div>
+                        </div>
+                    </li>
+ <% end %>
+
+                    <li class="list-group-item unread">
+                        <div class="media">
+                            <div class="pull-left">
+                                <div class="controls">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="basic_checkbox_2">
+                                        <label for="basic_checkbox_2"></label>
+                                    </div>
+                                    <a href="javascript:void(0);" class="favourite col-amber hidden-sm-down" data-toggle="active"><i class="zmdi zmdi-star"></i></a>
+                                </div>
+                                <div class="thumb hidden-sm-down m-r-20"> <img src="assets/images/xs/avatar2.jpg" class="rounded-circle" alt=""> </div>
+                            </div>
+                            <div class="media-body">
+                                <div class="media-heading">
+                                    <a href="mail-single.html" class="m-r-10">Simply dummy text</a>
+                                    <span class="badge bg-amber">Shop</span>
+                                    <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017">12:35 AM</time><i class="zmdi zmdi-attachment-alt"></i> </small>
+                                </div>
+                                <p class="msg">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                                
+                            </div>
+                        </div>
+                    </li>
+
+              
+
+
+                
+                </ul>
+                <div class="card m-t-5">
+                    <div class="body">
+                        <ul class="pagination pagination-primary m-b-0">
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+                            <li class="page-item active"><a class="page-link" href="javascript:void(0);">2</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ </div>

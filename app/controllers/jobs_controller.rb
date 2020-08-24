@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
   before_action :set_job, only: [:show, :edit, :update, :destroy]
+  before_action :check_for_existing_company, only: [:new, :create]
 
   # GET /jobs
   # GET /jobs.json
@@ -24,17 +25,20 @@ class JobsController < ApplicationController
   # POST /jobs
   # POST /jobs.json
   def create
-    @job = Job.new(job_params)
-
-    respond_to do |format|
-      if @job.save
-        format.html { redirect_to @job, notice: 'Job was successfully created.' }
-        format.json { render :show, status: :created, location: @job }
-      else
-        format.html { render :new }
-        format.json { render json: @job.errors, status: :unprocessable_entity }
-      end
+    @job = Job.new(job_params.merge(company_id: current_user.company.id))
+    if @job.save
+      redirect_to @job
     end
+
+    # respond_to do |format|
+    #   if @job.save
+    #     format.html { redirect_to @job, notice: 'Job was successfully created.' }
+    #     format.json { render :show, status: :created, location: @job }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @job.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /jobs/1
@@ -67,8 +71,14 @@ class JobsController < ApplicationController
       @job = Job.find(params[:id])
     end
 
+    def check_for_existing_company
+      unless current_user.company
+        redirect_to root_path, notice: "You can't do that."
+      end
+    end
+
     # Only allow a list of trusted parameters through.
     def job_params
-      params.fetch(:job, {})
+      params.require(:job).permit(:title, :description, :city, :state, :company_id)
     end
 end
