@@ -49,6 +49,8 @@
 
   
 
+
+
         <div class="mb-3">
           <label for="email">Email <span class="text-muted">(the email your employers will see)</span></label>
           <%= form.text_field :email, class: "form-control", placeholder: "your_email@example.com" %>
@@ -79,7 +81,9 @@
           </div>
         </div>
        
-    
+           <label for="about">Profile Picture</label> <br>
+          <%= form.file_field :image %>
+      
       
         </div>
         <hr class="mb-4">

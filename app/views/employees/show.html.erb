@@ -15,8 +15,15 @@
     <div class="row p-2">
         <div class="col-md-4 justify-content-center bg-dark border-right border-light p-4">
             <div class="row justify-content-center">     
-            <br>           
-                <%= image_tag ("/assets/face.jpg"), style: "max-width:47%;", class: "img-responsive mt-1 border border-secondary rounded"%>
+            <br>        
+
+                <%# <div class="img-responsive mt-1 border border-secondary rounded" style="max-width:47%;">
+                <%= image_tag(@employee.image, style:"max-width:100%;") %>
+                <%# </div> %> %>
+                
+
+
+
             </div>
             <%# <div class="row justify-content-center">                
                 <h3 class="tex-center text-dark"><b>Benjamin Rochlin</b></h3>
@@ -29,7 +36,7 @@
             <div class="row justify-content-center">
              <div style= "max-width:50%;">
 <br>
-            <button type="button" class="btn-xs btn-light btn-block disabled">add/change Photo</button>
+       
             
         
             </div>   
@@ -92,7 +99,7 @@
             </div>
             
             <div class="row pt-3"> 
-                <p class="text-justify"> This is your profile section, so make sure that your profile is accurate and up to date as this is what your potential employer will see. 
+                <p class="text-justify"> Make sure that your profile is accurate and up to date as this is what your potential employer will see. 
                      <span class="badge badge-light"></span> .</p>
             </div> 
 

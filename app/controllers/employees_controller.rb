@@ -52,7 +52,7 @@ end
   # PATCH/PUT /employees/1
   # PATCH/PUT /employees/1.json
   def update 
-  @employee.update(employeeedit_params)
+  @employee.update(employee_params)
   redirect_to @employee
   end
 
@@ -65,6 +65,12 @@ end
       format.json { head :no_content }
     end
   end
+
+  def addimage
+   @employee.image.attach(params[:image])
+  end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -80,10 +86,8 @@ end
 
     # Only allow a list of trusted parameters through.
     def employee_params
-      params.require(:employee).permit(:first_name, :last_name, :email, :city, :state, :about, :user_id)
+      params.require(:employee).permit(:first_name, :last_name, :email, :city, :state, :about, :user_id, :image)
     end
 
-    def employeeedit_params
-      params.require(:employee).permit(:first_name, :last_name, :email, :city, :state, :about, :user_id)
-    end
+   
 end

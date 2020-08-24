@@ -15,5 +15,7 @@ Rails.application.routes.draw do
   get "test1/profile"
   get "test2/show"
 
+
+
   root to: "home#index"
 end
