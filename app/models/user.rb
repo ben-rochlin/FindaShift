@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+
+  extend Devise::Models
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -7,6 +9,7 @@ class User < ApplicationRecord
   enum role: [:unassigned, :employee, :company, :admin]
 
   has_one :employee, :dependent => :destroy
+  has_one :company, :dependent => :destroy
   has_one :manager, :dependent => :destroy
 
 

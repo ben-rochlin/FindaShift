@@ -1,0 +1,156 @@
+
+
+
+<body onload="myFunction()" id="body">
+<div class="container">
+<div class="container-fluid bg-white text-dark" id="loader">
+    <div class="row d-flex flex-row justify-content-center align-items-center" style="min-height:100px;">
+        <div class="row">
+            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+        </div>   
+        
+    </div>       
+</div>
+<div class="container-fluid bg-secondary" style="display: none;" id="root">
+    <div class="row p-2">
+        <div class="col-md-4 justify-content-center bg-dark border-right border-light p-4">
+            <div class="row justify-content-center">     
+            <br>        
+
+                <div class="img-responsive border border-secondary rounded" style="max-width:40%;">
+                <%= image_tag(@company.logo, style:"max-width:100%;") %>
+                </div>
+                
+
+
+
+            </div>
+            <%# <div class="row justify-content-center">                
+                <h3 class="tex-center text-dark"><b>Benjamin Rochlin</b></h3>
+            </div>
+            <div class="row justify-content-center">  
+                <h6 class="text-center text-muted">Fullstack Developer</h6>
+            </div> %>
+
+
+            <div class="row justify-content-center">
+             <div style= "max-width:50%;">
+
+       
+            
+        
+            </div>   
+            </div>   
+
+
+            
+           <hr color="red"size="10">  
+
+            <div class="row justify-content-center">
+             <div style= "max-width:70%;">
+            
+            <%# <button type="button" class="btn btn-secondary btn-sm btn-block">Edit Account </button> %>
+              <%= link_to "Edit Account", edit_user_registration_path, class: "btn btn-secondary  btn-block" %>
+              <%= link_to "Edit Profile", edit_company_path, class: "btn btn-secondary  btn-block" %>
+            
+            <button type="button" class="btn btn-secondary btn-default btn-block">Same sized </button>
+            
+            <button type="button" class="btn btn-secondary btn-block">Same sized button</button>
+            
+            <button type="button" class="btn btn-secondary btn-block">Bluish - btn-light</button>
+            
+            <%# <button type="button" class="btn btn-secondary btn-block">Dark grey - btn-secondary</button> %>
+             <%# <br> %>
+            <button type="button" class="btn btn-primary btn-block">Finda Shift</button>
+            
+            <%# <button type="button" class="btn btn-info">Information  btn-info</button> <br /><br /><br />
+            
+            <button type="button" class="btn btn-light">Light grey  btn-light</button>
+            
+            <button type="button" class="btn btn-dark">Blackish  btn-dark</button>
+            
+            <button type="button" class="btn btn-danger">Delete Account btn-danger</button>
+            
+            <button type="button" class="btn btn-warning">Orange btn-warning</button> %>
+            </div>   
+            </div>   
+ 
+          
+            <div class="row justify-content-center text-muted">
+                <i class="fa fa-snowflake-o fa-spin fa-md"></i>
+            </div>   
+        
+
+
+
+
+      
+        </div>
+
+
+
+      
+
+
+        <div class="col-md-8 bg-white text-secondary p-5">
+        
+            <div class="row border-bottom border-muted">                  
+                <h1 class="text"><i class="fa fa-md fa-user text-center"></i> <b>Welcome To Findashift</b></h1>
+            </div>
+            
+            <div class="row pt-3"> 
+                <p class="text-justify"> Make sure that your profile is accurate and up to date as this is what your potential employees will see. 
+                     <span class="badge badge-light"></span> .</p>
+            </div> 
+
+
+              <br>
+            
+              <br>
+            <div class="row border-bottom border-muted">
+                <h3 class="text-dark"> <b> <%= @company.name %><a href="https://www.anvilinsights.com/" class="text-decoration-none text-dark"> <small> <%= @company.city %>, <%= @company.state %></small></a></b></h3>
+            </div>
+
+         
+
+            <div class="row pt-1">
+                <h4><%= @company.website %> </h4>
+            </div>
+           
+      
+
+                <br>
+        
+
+            <div class="row">
+                <h5 class="text-dark"><b>About us:</b></h5>
+            </div>
+           
+            <div class="row">
+                <p class="text-justify pr-3"> <%= @company.about %> 
+                </p>                                               
+            </div>
+                     
+            
+        </div>            
+    </div>
+    </div>
+</div>
+
+  <script>
+    var myVar;    
+    function myFunction() {
+      document.getElementById("body").style.background = "#ffffff";
+      myVar = setTimeout(showPage, 2000);
+    }    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("root").style.display = "block";
+      document.getElementById("footer").style.display = "block";
+      document.getElementById("body").style.background = "#f0f0f0";
+    }
+    </script>  
+</body>
+
+
+ 
