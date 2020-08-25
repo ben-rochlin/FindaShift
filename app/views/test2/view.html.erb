@@ -11,7 +11,7 @@
 <section class="content inbox">
     <div class="container-fluid">
         <div class="row clearfix">
-         <h1> Your Job Listings </h1>          
+         <h1> &nbsp; &nbsp; <%= @job.title%>  </h1>          
         </div>  
 
 
@@ -30,19 +30,21 @@
                             
                             <div class="media-body">
                                 <div class="media-heading m-r-10">
-                                    <%= link_to @job.title%> 
+                                    <%= @job.title%> 
                                     <span class="badge bg-blue"><%= @job.city %>, <%= @job.state %></span>
                                     <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017"><%= @job.created_at  %></time><i class="zmdi zmdi-attachment-alt"></i> </small>
                                 </div>
                                 <p class="msg"><%= @job.description %></p>
                                  <%= link_to 'Edit', edit_job_path(@job) %> <%= link_to 'Destroy', @job, method: :delete, data: { confirm: 'Are you sure?' } %>
                             </div>
+                           
                         </div>
+                         
                     </li>
- 
+ <%= link_to 'Edit', edit_job_path(@job) %> <%= link_to 'Destroy', @job, method: :delete, data: { confirm: 'Are you sure?' } %>
 <br>
   <div class="row clearfix">
-         <h1> Applications </h1>          
+         <h3> &nbsp; &nbsp; Applications </h3>          
         </div>  
 <br>
                     <li class="list-group-item unread">

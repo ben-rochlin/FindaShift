@@ -3,7 +3,7 @@
      
 <br>
 
-<%= link_to 'New Job', new_job_path %>
+
 
 
 
@@ -11,8 +11,9 @@
 <section class="content inbox">
     <div class="container-fluid">
         <div class="row clearfix">
-         <h1> Your Job Listings </h1>          
+         <h1> &nbsp; &nbsp; Your Job Listings </h1>    
         </div>  
+        
 
 
   <% @jobs.each do |job| %>
@@ -30,12 +31,12 @@
                             
                             <div class="media-body">
                                 <div class="media-heading m-r-10">
-                                    <%= link_to job.title, job_path(job)%> 
+                                    <%= job.title %> 
                                     <span class="badge bg-blue"><%= job.city %>, <%= job.state %></span>
                                     <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017"><%= job.created_at  %></time><i class="zmdi zmdi-attachment-alt"></i> </small>
                                 </div>
                                 <p class="msg"><%= job.description %></p>
-                                 <%= link_to 'View', viewlisting_path(job) %> <%= link_to 'Edit', edit_job_path(job) %> <%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %>
+                                 <%= link_to 'View', viewlisting_path(job) %> 
                             </div>
                         </div>
                     </li>
