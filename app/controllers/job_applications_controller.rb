@@ -14,13 +14,17 @@ class JobApplicationsController < ApplicationController
   
     def new
 
-      @job_application = JobApplication.new
-     
+     @job_application = JobApplication.new
      
     end
   
     def create
  
+      @job_application = JobApplication.find_by_employee_id_and_job_id(params[:job_application][:employee_id], params[:job_application][:job_id])
+
+      if !@job_application.nil?
+        redirect_to jobs_path, alert: "You already applied for this job."
+      else
         @job_application = JobApplication.new(job_application_params)
         if @job_application.save
           redirect_to employees_path, alert: "Your application has been sent. Good Luck!"
@@ -28,6 +32,7 @@ class JobApplicationsController < ApplicationController
         redirect_to new_job_application_path, alert: "Oops, there was a problem, please try again"
         end
       end
+    end
     
   
     def show
