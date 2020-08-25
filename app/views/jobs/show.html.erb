@@ -12,7 +12,7 @@
     <div class="col-md-12 order-md-1 pt-5">
     <h4 class="mb-3"></h4>
 
-<article id="content" class="">
+
 
            
 
@@ -23,34 +23,24 @@
             <section id="section-1">
               <h2 class="section-title"> <%= @job.title %>, <small> <%= @job.city %> </small> </h2>
 
-             <h3 class="h2 font-weight-light"> <b><%= @job.company.name %>. </b></h3>
+             <h1 class="h2 font-weight-light"><%= @job.company.name %></h1>
                 <br>
               <p> <%= @job.description  %></p> <br>
               <%# <div class="d-flex align-items-center flex-column"> %>
-              <button type="button" class="btn btn-secondary btn-default col-4 ">View Company profile </button>
-              <button type="button" class="btn btn-secondary btn-default col-3 ">Apply now </button>
+              
+              <%= link_to "View Company profile", company_path, class: "btn btn-secondary btn-default col-sm-10 col-lg-4 mb-1" %>
+              <button type="button" class="btn btn-secondary btn-default col-sm-10 col-lg-3 mb-1">Apply now </button>
               <%# </div> %>
+              
               </div>
             </section>
             </div>
 
-            <!-- / typography -->
-              <section id="section-1">
-              <h2 class="section-title"> <%= @job.title %> <a data-scroll="" href="#section-1" class="anchor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Copy URL"></a></h2>
-
-             <h1 class="h2 font-weight-light">Your <b>documentation</b> template can look like this. Check it out.</h1>
-
-              <p> <%= @job.description  %></p>
-              
-            </section>
-
-
-            <!-- colors -->
-            
+        
 
 
 
-          </article>
+       
 
 
 
