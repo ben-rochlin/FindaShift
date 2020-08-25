@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  before_action :set_job, only: [:show, :edit, :update, :destroy]
+  # before_action :set_job, only: [:show, :edit, :update, :destroy]
   before_action :check_for_existing_company, only: [:new, :create]
 
   # GET /jobs
@@ -11,6 +11,7 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.json
   def show
+    @job = Job.find(params[:id])
   end
 
   # GET /jobs/new
