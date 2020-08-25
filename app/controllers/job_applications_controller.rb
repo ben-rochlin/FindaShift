@@ -60,7 +60,7 @@ class JobApplicationsController < ApplicationController
     end
   
     def job_application_params
-      params.require(:job_application).permit(:employee_id, :job_id, :coverletter)
+      params.require(:job_application).permit(:employee_id, :job_id, :summary, :coverletter)
     end
   end
   

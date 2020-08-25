@@ -42,15 +42,14 @@
          <h3> &nbsp; &nbsp; Applications </h3>          
         </div>  
 <br>
+
+
+                  
                     <li class="list-group-item unread">
-                        <div class="media">
-                            <div class="pull-left">
-                        
-                              
-                            </div>
+                        <div class="media"> 
                             <div class="media-body">
                                 <div class="media-heading">
-                                    <a href="mail-single.html" class="m-r-10">Simply dummy text</a>
+                                    <a href="mail-single.html" class="m-r-10"></a>
                                     <span class="badge bg-amber">Shop</span>
                                     <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017">12:35 AM</time><i class="zmdi zmdi-attachment-alt"></i> </small>
                                 </div>
@@ -59,13 +58,17 @@
                         </div>
                     </li>
 
+                    <%= @job.employees.each do |employee| %>
+                   <p> <%= employee.first_name %> </p>
+                    <% end  %>
+
+
                      <li class="list-group-item unread">
                         <div class="media">
-                         
                             <div class="media-body">
                                 <div class="media-heading">
                                     <a href="mail-single.html" class="m-r-10"></a>
-                                     <%= @job.employees.first! %>
+                                     
                                     <span class="badge bg-amber">Shop</span>
                                     <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017">12:35 AM</time><i class="zmdi zmdi-attachment-alt"></i> </small>
                                 </div>
