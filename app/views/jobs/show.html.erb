@@ -5,7 +5,7 @@
     
 
 <div class="row justify-content-center">
-<div class="col-md-10 col-lg-6">
+<div class="col-md-10 col-lg-7">
 <div class="container-sm border-right border-light">
 
 
@@ -18,7 +18,24 @@
 
 
             <!-- typogrpahy -->
+            <div class="pb-5 mb-5 ">
+            <div class="border rounded p-5">
             <section id="section-1">
+              <h2 class="section-title"> <%= @job.title %>, <small> <%= @job.city %> </small> </h2>
+
+             <h3 class="h2 font-weight-light"> <b><%= @job.company.name %>. </b></h3>
+                <br>
+              <p> <%= @job.description  %></p> <br>
+              <%# <div class="d-flex align-items-center flex-column"> %>
+              <button type="button" class="btn btn-secondary btn-default col-4 ">View Company profile </button>
+              <button type="button" class="btn btn-secondary btn-default col-3 ">Apply now </button>
+              <%# </div> %>
+              </div>
+            </section>
+            </div>
+
+            <!-- / typography -->
+              <section id="section-1">
               <h2 class="section-title"> <%= @job.title %> <a data-scroll="" href="#section-1" class="anchor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Copy URL"></a></h2>
 
              <h1 class="h2 font-weight-light">Your <b>documentation</b> template can look like this. Check it out.</h1>
@@ -26,7 +43,6 @@
               <p> <%= @job.description  %></p>
               
             </section>
-            <!-- / typography -->
 
 
             <!-- colors -->
