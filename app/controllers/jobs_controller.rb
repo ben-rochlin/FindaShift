@@ -28,7 +28,7 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params.merge(company_id: current_user.company.id))
     if @job.save
-      redirect_to @job
+      redirect_to ownjobs_path
     end
 
     # respond_to do |format|

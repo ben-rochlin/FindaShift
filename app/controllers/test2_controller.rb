@@ -10,6 +10,8 @@ class Test2Controller < ApplicationController
 
     def view
       @job = Job.find(params[:id])
+    
+      
     end
 
 end
