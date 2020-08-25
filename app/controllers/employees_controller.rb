@@ -35,6 +35,7 @@ end
     @employee = Employee.new(employee_params.merge(user_id: current_user.id))
     if @employee.save
       redirect_to @employee
+  
     end
    
 

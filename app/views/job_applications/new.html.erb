@@ -1,0 +1,69 @@
+<body class="bg-light">
+    
+
+<div class="row justify-content-center">
+<div class="col-md-10 col-lg-6">
+<div class="container-sm">
+
+
+    <div class="col-md-12 order-md-1 pt-5">
+    <h4 class="mb-3">Job Application</h4>
+
+
+
+
+
+    <%= form_with(model: @job_application, local: true) do |form| %>
+  
+  
+   
+ 
+  <%= form.hidden_field :employee_id, :value => params[:employee_id] %>
+  <%= form.hidden_field :job_id, :value => params[:job_id] %>
+
+  
+
+
+
+
+      
+
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="firstName">Quick Summary</label>
+            <%= form.text_field :summary, class: "form-control", placeholder: "A snappy one or two lines why you would be suitable for the job" %>
+          
+          </div>
+       </div>
+
+
+
+
+  
+
+           <div class="mb-3">
+          <label for="about">Cover Letter</label>
+          <%= form.text_area :coverletter, class: "form-control" %>
+        </div>
+       
+           <label for="resume">Upload a resume</label> <br>
+          <%# <%= form.file_field :resume %> 
+      
+      
+        </div>
+        <hr class="mb-4">
+        <%= form.submit "Continue", class: "actions btn btn-primary btn-lg btn-block py-2 my-3" %>
+
+      <% end %>
+     </form>
+    </div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</body>

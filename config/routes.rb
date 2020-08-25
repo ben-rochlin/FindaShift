@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :managers
   resources :employees
   resources :companies
+  resources :job_applications
   
 
   devise_for :users
