@@ -10,6 +10,7 @@ class Test2Controller < ApplicationController
 
     def view
       @job = Job.find(params[:id])
+      @job_applications = JobApplication.where(job_id: params[:id])
     
       
     end
