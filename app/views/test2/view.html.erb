@@ -3,111 +3,66 @@
 
 
 <div class="container">
-<section class="content inbox">
+ <section class="content inbox">
     <div class="container-fluid">
+
         <div class="row clearfix">
-         <h1> &nbsp; <%= @job.title%>  </h1>          
+         <h1> &nbsp; <b> Job Listing: </b> <%= @job.title%>  </h1>          
         </div>  
 
 
   
         <div class="row clearfix">
             <div class="col-md-12 col-lg-12 col-xl-12">
-                <ul class="mail_list list-group list-unstyled">
-
-
-                    <li class="list-group-item mb-4">
-                        <div class="media">
-                            <div class="pull-left">                                
-                            
-                            
-                            </div>
-                            
-                            <div class="media-body">
-                                <div class="media-heading m-r-10">
-                                    <%= @job.title%> 
-                                    <span class="badge bg-blue"><%= @job.city %>, <%= @job.state %></span>
-                                    <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017"><%= @job.created_at  %></time><i class="zmdi zmdi-attachment-alt"></i> </small>
+                        <ul class="mail_list list-group list-unstyled">
+                            <li class="list-group-item mb-4 shadow-sm">
+                             <div class="media">                   
+                                <div class="media-body">
+                                    <div class="media-heading m-r-10">
+                                        <%= @job.title%> 
+                                        <span class="badge bg-blue"><%= @job.city %>, <%= @job.state %></span>
+                                        <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017"><%= @job.created_at  %></time><i class="zmdi zmdi-attachment-alt"></i> </small>
+                                    </div>
+                                     <p class="msg"><%= @job.description %></p>
+                                     <%= link_to 'Edit', edit_job_path(@job) %> or <%= link_to 'Delete', @job, method: :delete, data: { confirm: 'Are you sure?' } %>  listing
                                 </div>
-                                <p class="msg"><%= @job.description %></p>
-                                 <%= link_to 'Edit', edit_job_path(@job) %> <%= link_to 'Destroy', @job, method: :delete, data: { confirm: 'Are you sure?' } %>
-                            </div>
-                           
-                        </div>
-                         
-                    </li>
+                             </div>
+                            </li>
+                        </ul>
 
-<br>
-  <div class="row clearfix">
+
+        <div class="shadow bg-light px-3 pt-3 pb-1">
+        <div class="row clearfix">
          <h3> &nbsp; &nbsp; Applications </h3>          
         </div>  
-<br>
+        </div>
 
 
-                  
-             
 
         <% @job_applications.each do |app| %>
 
-
-                <li class="list-group-item unread">
-            <div class="media"> 
-                <div class="media-body">
-                    <div class="media-heading">
-                   
-                    <span class="m-r-10"> <b> <%= app.employee.first_name %> <%= app.employee.last_name %> </b> </span>
-                      
-                        <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017">12:35 AM</time><i class="zmdi zmdi-attachment-alt"></i> </small>
+            <li class="list-group-item unread shadow">
+                <div class="media"> 
+                  <div class="media-body">
+                    <div class="media-heading">  
+                    <span class="m-r-10"> <b> <%= app.employee.first_name %> <%= app.employee.last_name %> </b> </span> 
+                    <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017">12:35 AM</time><i class="zmdi zmdi-attachment-alt"></i> </small>
                     </div>
                     <p> <%= app.summary %> </p>  
-                     <%= link_to 'View application', job_application_path(app) %>                              
+                     <%= link_to 'view', job_application_path(app) %>                              
+                  </div>
                 </div>
-            </div>
-        </li>
+             </li>
         
         <% end %>
                    
-                            <div class="media-body">
-                                <div class="media-heading">
-                                    <a href="mail-single.html" class="m-r-10">Simply dummy text</a>
-                                    <span class="badge bg-amber">Shop</span>
-                                    <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017">12:35 AM</time><i class="zmdi zmdi-attachment-alt"></i> </small>
-                                </div>
-                                <p class="msg">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                                
-                            </div>
-
-                     <li class="list-group-item unread">
-                        <div class="media">
-                            <div class="media-body">
-                                <div class="media-heading">
-                                    <a href="mail-single.html" class="m-r-10"></a>
-                                     
-                                    <span class="badge bg-amber">Shop</span>
-                                    <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017">12:35 AM</time><i class="zmdi zmdi-attachment-alt"></i> </small>
-                                </div>
-                                <p class="msg">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                                
-                            </div>
-                        </div>
-                    </li>
-
-              
+                  
 
 
-                
-                </ul>
-                <div class="card m-t-5">
-                    <div class="body">
-                        <ul class="pagination pagination-primary m-b-0">
-                            <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
-                            <li class="page-item active"><a class="page-link" href="javascript:void(0);">2</a></li>
-                            <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
-                            <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
-    </div>
+</div>
 </section>
- </div>
+</div>
+<br>
+<br>

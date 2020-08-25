@@ -1,11 +1,14 @@
 
 
-<div class="container">
+<div class="container shadow py-2">
 <section class="content inbox">
     <div class="container-fluid">
-        <div class="row clearfix">
+
+    <div class=" shadow-sm bg-light py-3">
+        <div class="row clearfix pl-4">
          <h1> Jobs Listings </h1>          
         </div>  
+        </div> 
 
 
   <% @jobs.each do |job| %>
@@ -62,6 +65,8 @@
 
                 
                 </ul>
+
+                <br>
                 <div class="card m-t-5">
                     <div class="body">
                         <ul class="pagination pagination-primary m-b-0">
@@ -78,3 +83,6 @@
     </div>
 </section>
  </div>
+
+ <br>
+ <br>
