@@ -36,8 +36,7 @@ class JobApplicationsController < ApplicationController
     
   
     def show
-      authorize @job_application
-      @jobs = Job.all_sort_by_date.limit(8)
+
     end
   
     def edit

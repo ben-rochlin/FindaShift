@@ -54,18 +54,27 @@
             <div class="media"> 
                 <div class="media-body">
                     <div class="media-heading">
-                        <a href="mail-single.html" class="m-r-10"></a>
-                        <span class="badge bg-amber"> <%= app.employee.first_name %> </span>
+                   
+                    <span class="m-r-10"> <b> <%= app.employee.first_name %> <%= app.employee.last_name %> </b> </span>
+                      
                         <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017">12:35 AM</time><i class="zmdi zmdi-attachment-alt"></i> </small>
                     </div>
-                    <p> <%= app.summary %> </p>                                
+                    <p> <%= app.summary %> </p>  
+                     <%= link_to 'View application', job_application_path(app) %>                              
                 </div>
             </div>
         </li>
         
         <% end %>
                    
-
+                            <div class="media-body">
+                                <div class="media-heading">
+                                    <a href="mail-single.html" class="m-r-10">Simply dummy text</a>
+                                    <span class="badge bg-amber">Shop</span>
+                                    <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017">12:35 AM</time><i class="zmdi zmdi-attachment-alt"></i> </small>
+                                </div>
+                                <p class="msg">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>                                
+                            </div>
 
                      <li class="list-group-item unread">
                         <div class="media">
