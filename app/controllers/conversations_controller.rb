@@ -20,6 +20,6 @@ class ConversationsController < ApplicationController
 
   private
   def conversation_params
-    params.require(:conversation).permit(:sender_id, :recipient_id)
+    params.permit(:sender_id, :receiver_id)
   end
 end
