@@ -1,0 +1,67 @@
+
+
+     
+<br>
+
+
+
+
+
+<div class="container">
+<section class="content inbox">
+    <div class="container-fluid">
+        <div class="row clearfix">
+         <h1> &nbsp; &nbsp; Your Job Listings </h1>    
+        </div>  
+        
+
+
+  <% @jobs.each do |job| %>
+        <div class="row clearfix">
+            <div class="col-md-12 col-lg-12 col-xl-12">
+                <ul class="mail_list list-group list-unstyled">
+
+
+                    <li class="list-group-item">
+                        <div class="media">
+                            <div class="pull-left">                                
+                            
+                            
+                            </div>
+                            
+                            <div class="media-body">
+                                <div class="media-heading m-r-10">
+                                    <%= job.title %> 
+                                    <span class="badge bg-blue"><%= job.city %>, <%= job.state %></span>
+                                    <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017"><%= job.created_at  %></time><i class="zmdi zmdi-attachment-alt"></i> </small>
+                                </div>
+                                <p class="msg"><%= job.description %></p>
+                                 <%= link_to 'View', viewlisting_path(job) %> 
+                            </div>
+                        </div>
+                    </li>
+ <% end %>
+
+                    
+
+              
+
+
+                
+                </ul>
+                <div class="card m-t-5">
+                    <div class="body">
+                        <ul class="pagination pagination-primary m-b-0">
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+                            <li class="page-item active"><a class="page-link" href="javascript:void(0);">2</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ </div>

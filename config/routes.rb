@@ -23,8 +23,11 @@ Rails.application.routes.draw do
   get "test1/jobs"
   get "test1/new"
   get "test2/show"
-  get "test2/listings", to: "test2#listings", as: "ownjobs"
-  get "test2/view/:id", to: "test2#view", as: "viewlisting"
+  # get "test2/listings", to: "test2#listings", as: "ownjobs"
+  # get "test2/view/:id", to: "test2#view", as: "viewlisting"
+
+  get "your/listings", to: "your#listings", as: "ownjobs"
+  get "your/view/:id", to: "your#view", as: "viewlisting"
 
 
 

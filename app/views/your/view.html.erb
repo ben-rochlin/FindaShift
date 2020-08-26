@@ -1,0 +1,68 @@
+
+
+
+
+<div class="container">
+ <section class="content inbox">
+    <div class="container-fluid">
+
+        <div class="row clearfix">
+         <h1> &nbsp; <b> Job Listing: </b> <%= @job.title%>  </h1>          
+        </div>  
+
+
+  
+        <div class="row clearfix">
+            <div class="col-md-12 col-lg-12 col-xl-12">
+                        <ul class="mail_list list-group list-unstyled">
+                            <li class="list-group-item mb-4 shadow-sm">
+                             <div class="media">                   
+                                <div class="media-body">
+                                    <div class="media-heading m-r-10">
+                                        <%= @job.title%> 
+                                        <span class="badge bg-blue"><%= @job.city %>, <%= @job.state %></span>
+                                        <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017"><%= @job.created_at  %></time><i class="zmdi zmdi-attachment-alt"></i> </small>
+                                    </div>
+                                     <p class="msg"><%= @job.description %></p>
+                                     <%= link_to 'Edit', edit_job_path(@job) %> or <%= link_to 'Delete', @job, method: :delete, data: { confirm: 'Are you sure?' } %>  listing
+                                </div>
+                             </div>
+                            </li>
+                        </ul>
+
+
+        <div class="shadow bg-light px-3 pt-3 pb-1">
+        <div class="row clearfix">
+         <h3> &nbsp; &nbsp; Applications </h3>          
+        </div>  
+        </div>
+
+
+
+        <% @job_applications.each do |app| %>
+
+            <li class="list-group-item unread shadow">
+                <div class="media"> 
+                  <div class="media-body">
+                    <div class="media-heading">  
+                    <span class="m-r-10"> <b> <%= app.employee.first_name %> <%= app.employee.last_name %> </b> </span> 
+                    <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017">12:35 AM</time><i class="zmdi zmdi-attachment-alt"></i> </small>
+                    </div>
+                    <p> <%= app.summary %> </p>  
+                     <%= link_to 'view', job_application_path(app) %>                              
+                  </div>
+                </div>
+             </li>
+        
+        <% end %>
+                   
+                  
+
+
+            </div>
+        </div>
+</div>
+</section>
+</div>
+<br>
+<br>
