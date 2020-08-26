@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
 
 
+  get 'messages/index'
+  get 'conversations/index'
   resources :jobs
   resources :managers
   resources :employees
   resources :companies
   resources :job_applications
+
+  resources :conversations, only: [:index, :create] do
+    resources :messages, only: [:index, :create]
+  end
   
 
   devise_for :users

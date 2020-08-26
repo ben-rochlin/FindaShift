@@ -1,0 +1,56 @@
+<div class="container-sm">
+<div class="row justify-content-center">
+<div class="col-md-8">
+
+
+
+conversation with <%= @conversation.recipient(current_user).name %>
+  <% @conversation.messages.each do |message| %>
+    <% if message.body %>
+      
+
+
+
+<ul class="mail_list list-group list-unstyled">
+    <li class="list-group-item mb-1 shadow-sm">
+      <div class="media">                   
+        <div class="media-body">
+            <div class="media-heading m-r-10">
+               <b> <%= message.user.name %> ben</b>
+                
+                <small class="float-right text-muted"><time class="hidden-sm-down" datetime="2017"><%= message.time %></time><i class="zmdi zmdi-attachment-alt"></i> </small>
+            </div>
+              <p class="msg"><%= message.body %></p>
+              
+        </div>
+      </div>
+    </li>
+</ul>
+
+    <% end %>
+  <% end %>
+
+
+
+
+
+
+
+
+
+
+
+<%= form_for [@conversation, @message] do |f| %>
+  <div class="form-group">
+    <%= f.text_area :body, autofocus: true, placeholder: "Your message", class: "form-control", rows: 3 %>
+  </div>
+
+  <%= f.submit "Send", class: "btn btn-primary pull-right" %>
+<% end %>
+
+
+</div>
+</div>
+</div>
+
+ 

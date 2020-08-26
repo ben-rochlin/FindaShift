@@ -23,6 +23,11 @@
     <div class="row justify-content-center">
       <div class="col-md-5 col-lg-4">
 
+
+      <label class="sr-only" for="input1-signin-01">Username</label>
+
+        <%= f.input :name, autofocus: true, autocomplete: "username", class: "form-control my-3 bg-light" %>
+
         <label class="sr-only" for="input1-signin-01">Email</label>
 
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control my-3 bg-light", placeholder: "Email" %>
