@@ -1,1 +1,60 @@
-<h1> oh hi mark </h1>
+<body class="bg-light">
+    
+
+<div class="row justify-content-center">
+<div class="col-md-10 col-lg-7">
+<div class="container-sm border-right border-light">
+
+
+    <div class="col-md-12 order-md-1 ">
+    <h4 class="mb-3"></h4>
+
+
+
+           
+
+
+            <!-- typogrpahy -->
+            <div class="pb-5 mb-5 ">
+            <div class="border rounded p-5 shadow-sm">
+            <section id="section-1">
+              <h2 class="section-title"> <%= @job_application.employee.first_name %> <%= @job_application.employee.last_name %> , <small> <%= @job_application.employee.city %> <%= @job_application.employee.state %> </small> </h2>
+
+            <div class="h2 font-weight-light">
+            <h1> <%= @job_application.summary %> </h1>
+            </div>
+
+             
+                <br>
+              <p> <%= @job_application.coverletter %></p> <br>
+              <%# <div class="d-flex align-items-center flex-column"> %>
+              
+              
+              <%# <button type="button" class="btn btn-secondary btn-default col-sm-10 col-lg-3 mb-1">Apply now </button> %>
+            
+
+            <%= link_to "View profile #{@job_application.employee.user.name}", employee_path(@job_application.employee.id), method: 'get', class:"btn btn-secondary btn-default col-sm-10 col-lg-3 mb-1" %>
+
+            
+               <%= link_to "contact #{@job_application.employee.user.name}", conversations_path(sender_id: current_user.id, recipient_id: @job_application.employee.user.id), method: 'post', class:"btn btn-secondary btn-default col-sm-10 col-lg-3 mb-1" %>
+              <%# </div> %>
+              
+              </div>
+            </section>
+            </div>
+
+        
+
+
+
+       
+
+
+
+    
+    </div>
+
+</div>
+</div>
+</div>
+</div>

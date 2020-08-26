@@ -1,0 +1,1 @@
+<%= link_to "Message #{@employee.user.name}", conversations_path(sender_id: current_user.id, recipient_id: @employee.user.id), method: 'post', class:"button is-link" %>

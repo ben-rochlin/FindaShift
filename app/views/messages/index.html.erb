@@ -4,7 +4,7 @@
 
 
 
-conversation with <%= @conversation.recipient(current_user).name %>
+<h2> Conversation with <%= @conversation.recipient(current_user).name %> Ben </h2>
   <% @conversation.messages.each do |message| %>
     <% if message.body %>
       
@@ -12,7 +12,7 @@ conversation with <%= @conversation.recipient(current_user).name %>
 
 
 <ul class="mail_list list-group list-unstyled">
-    <li class="list-group-item mb-1 shadow-sm">
+    <li class="list-group-item mb-0 shadow-sm">
       <div class="media">                   
         <div class="media-body">
             <div class="media-heading m-r-10">
@@ -34,7 +34,7 @@ conversation with <%= @conversation.recipient(current_user).name %>
 
 
 
-
+<br>
 
 
 
@@ -42,7 +42,7 @@ conversation with <%= @conversation.recipient(current_user).name %>
 
 <%= form_for [@conversation, @message] do |f| %>
   <div class="form-group">
-    <%= f.text_area :body, autofocus: true, placeholder: "Your message", class: "form-control", rows: 3 %>
+    <%= f.text_area :body, autofocus: true, placeholder: "Your message", class: "form-control", rows: 2 %>
   </div>
 
   <%= f.submit "Send", class: "btn btn-primary pull-right" %>

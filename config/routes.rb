@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get 'messages/index'
-  get 'conversations/index'
+
   resources :jobs
   resources :managers
   resources :employees
